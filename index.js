@@ -23,9 +23,7 @@ reset.addEventListener('click', function(){
     m.value = 0;
     s.value = 0;
     stopInterval()
-    var audio = new Audio('https://d6cp9b00-a.akamaihd.net/downloads/ringtones/files/mp3/alarm-sound-21949.mp3');
-    audio.play();
-    // location.reload()
+    location.reload()
 })
 
 function timer(){
@@ -33,6 +31,8 @@ function timer(){
         h.value = 0;
         m.value = 0;
         s.value = 0;
+        var audio = new Audio('audio/alarm-sound-21949.mp3');
+        audio.play();
     } else if(s.value != 0){
         s.value--;
     } else if(m.value != 0 && s.value == 0){
